@@ -1,6 +1,4 @@
-
 import logging
-import os
 from aiogram import Bot, Dispatcher, types
 from aiogram.types import Message
 from aiogram.filters import CommandStart
@@ -16,8 +14,8 @@ sheet = client.open_by_key("1KobwKat_W2KqCSveErU0tXPNavy-gwJAc0-gcTwZt38").works
 def get_cities():
     return [v.strip().lower() for v in sheet.col_values(1)[1:] if v.strip()]
 
-# Получаем токен из переменной окружения
-TOKEN = os.getenv("BOT_TOKEN")
+# ВРЕМЕННО: Токен вставлен прямо в код (для теста)
+TOKEN = "7567214028:AAEaZkemRn1_sQc5b9mlV84ZYjzsJ0SYovo"
 
 # Настройка Telegram-бота
 logging.basicConfig(level=logging.INFO)
